@@ -1,0 +1,142 @@
+/* ---------- Global ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    min-height: 100vh;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00ffd5;
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: #00ffd5;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- Container ---------- */
+.container {
+    background: #ffffff;
+    margin: 40px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+    text-align: center;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Forms ---------- */
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #66a6ff;
+    border-radius: 10px;
+    width: 80%;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #ff512f;
+}
+
+/* ---------- Button ---------- */
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+}
+
+/* ---------- Image Result ---------- */
+img {
+    border-radius: 12px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Prediction Text ---------- */
+.prediction {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

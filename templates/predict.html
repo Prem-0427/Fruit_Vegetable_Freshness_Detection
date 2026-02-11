@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Predict</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav>
+<a href="/">Home</a>
+<a href="/predict">Predict</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+</nav>
+<div class="container">
+
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="image" required>
+<button type="submit">Predict</button>
+</form>
+
+</div>
+</body>
+</html>

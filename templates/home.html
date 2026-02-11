@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav>
+<a href="/">Home</a>
+<a href="/predict">Predict</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+</nav>
+<div class="container">
+    <h1>Fruit & Vegetable Freshness Detection</h1>
+
+    <p style="text-align:center;">
+        This project uses <b>Machine Learning</b> to identify whether fruits and vegetables
+        are <b>Fresh (Healthy)</b> or <b>Rotten (Unhealthy)</b> based on image analysis.
+    </p>
+
+    <h3>Why this system?</h3>
+    <ul>
+        <li>🍎 Helps consumers choose fresh food</li>
+        <li>🥕 Reduces food wastage</li>
+        <li>🏪 Useful for markets & supermarkets</li>
+        <li>🤖 Automated & fast prediction</li>
+    </ul>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="/predict">
+            <button>Start Prediction</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

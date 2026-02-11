@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/predict">Predict Again</a>
+</nav>
+
+<div class="container" style="text-align:center;">
+    <h2>Prediction Result</h2>
+
+    <img src="data:image/png;base64,{{ image_data }}"
+         style="width:300px; margin:20px; border-radius:15px;">
+
+    <h3>Detected Class</h3>
+    <h2>{{ prediction }}</h2>
+
+    <h3>Condition</h3>
+    <h2 style="color: {{ status_color }};">
+        {{ condition }}
+    </h2>
+
+    {% if "GOOD" in condition %}
+        <p style="color:green;">
+            ✅ This fruit/vegetable is fresh and safe for consumption.
+        </p>
+    {% else %}
+        <p style="color:red;">
+            ❌ This fruit/vegetable is rotten and not recommended for consumption.
+        </p>
+    {% endif %}
+
+    <a href="/predict">
+        <button>Predict Another Image</button>
+    </a>
+</div>
+
+</body>
+</html>
